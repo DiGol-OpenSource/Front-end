@@ -1,0 +1,42 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "juan",
+      "phoneNumber": 987452123,
+      "dni": 7458412
+    },
+    {
+      "id": 2,
+      "name": "julio",
+      "phoneNumber": 98854120,
+      "dni": "7845112"
+    },
+    {
+      "id": 3,
+      "name": "Pedro",
+      "phoneNumber": 988741520,
+      "dni": "21547784"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "customer": "Pedro",
+      "date": "12/02/2022-13",
+      "prepayment": 20
+    },
+    {
+      "id": 2,
+      "customer": "Ana",
+      "date": "2022-05-18",
+      "prepayment": "10"
+    },
+    {
+      "id": 3,
+      "customer": "Juanito",
+      "date": "2022-05-07",
+      "prepayment": "10"
+    }
+  ]
+}
