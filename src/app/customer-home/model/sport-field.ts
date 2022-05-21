@@ -1,7 +1,9 @@
 export interface SportField {
   id: number;
   name:string,
+  img:string,
   address:string,
-  price:number,
   description:string,
+  price:number,
+
 }

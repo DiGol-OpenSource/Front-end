@@ -1,4 +1,14 @@
 {
+  "sportsFields":[
+    {
+      "id": 1,
+      "name": "Grass Los Santos",
+      "img": "",
+      "address": "Street Los valles",
+      "description": "Lorem lore lorem lore lorem lore lorem lore loremlore loremlore lorem",
+      "price": 30
+    }
+  ],
   "customers": [
     {
       "id": 1,

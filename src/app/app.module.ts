@@ -23,6 +23,7 @@ import {ReservationsService} from "./reservation/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {CustomerHomeComponent} from "./customer-home/pages/customer-home.component/customer-home.component.component";
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -36,23 +37,24 @@ import {CustomerHomeComponent} from "./customer-home/pages/customer-home.compone
     CustomerHomeComponent
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    RouterModule,
-    MatPaginatorModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        RouterModule,
+        MatPaginatorModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatIconModule,
+        MatCardModule
+    ],
   providers: [CustomersService,ReservationsService],
   bootstrap: [AppComponent]
 })
