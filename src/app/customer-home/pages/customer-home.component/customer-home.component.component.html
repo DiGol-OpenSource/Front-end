@@ -2,14 +2,15 @@
     <mat-card *ngFor="let sportfield of sportsFields">
         <mat-card-header>
         <mat-card-title>{{sportfield.name}}</mat-card-title>
+            <mat-card-subtitle>{{sportfield.address}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://grassverdeperu.com/wp-content/uploads/2021/04/Caracteristicas-del-Grass-Sintetico-Deportivo-768x768.jpg" alt="Photo of sport field">
+        <img mat-card-image src="{{sportfield.img}}" alt="Photo of sport field">
         <mat-card-content>
             <p>{{sportfield.description}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button>Reserve</button>
-            <h3>{{sportfield.price}}</h3>
+            <button mat-button>Reserve</button>
+            <h3>S/{{sportfield.price}}</h3>
         </mat-card-actions>
     </mat-card>
 </div>
