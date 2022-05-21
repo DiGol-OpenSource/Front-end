@@ -64,10 +64,4 @@ export class ReservationsService {
         retry(2),
         catchError(this.handleError));
   }
-
-
-
-
-
-
 }

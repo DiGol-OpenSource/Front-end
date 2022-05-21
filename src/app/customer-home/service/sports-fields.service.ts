@@ -34,11 +34,20 @@ export class SportsFieldsService {
             catchError(this.handleError)
         );
   }
+
   create(item: any): Observable<SportField> {
     return this.http.post<SportField>(this.basePath, JSON.stringify(item), this.httpOptions)
         .pipe(
             retry(2),
             catchError(this.handleError));
+  }
+  getById(id:number): Observable<SportField> {
+    const url=`${this.basePath}/${id}`;
+    return this.http.get<SportField>(url).pipe(
+        retry(2),
+        catchError(this.handleError)
+    )
+
   }
 
 }

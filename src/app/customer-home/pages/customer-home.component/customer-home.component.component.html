@@ -9,7 +9,7 @@
             <p>{{sportfield.description}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>Reserve</button>
+            <button mat-button (click)="getReservation(sportfield.id)">Reserve</button>
             <h3>S/{{sportfield.price}}</h3>
         </mat-card-actions>
     </mat-card>
