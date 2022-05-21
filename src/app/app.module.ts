@@ -25,6 +25,9 @@ import { RegisterComponent } from './register/register.component';
 import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatSortModule} from "@angular/material/sort";
+import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
+import {SportsFieldsService} from "./customer/service/sports-fields.service";
+
 
 
 
@@ -38,6 +41,7 @@ import {MatSortModule} from "@angular/material/sort";
     LoginComponent,
     RegisterComponent,
     CustomerHomeComponent,
+    CustomerReservationComponent,
   ],
     imports: [
         BrowserModule,
@@ -58,7 +62,7 @@ import {MatSortModule} from "@angular/material/sort";
         MatCardModule,
         MatSortModule
     ],
-  providers: [CustomersService,ReservationsService],
+  providers: [CustomersService,ReservationsService,SportsFieldsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

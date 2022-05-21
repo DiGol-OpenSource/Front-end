@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 import {SportField} from "../../model/sport-field";
 import {SportsFieldsService} from "../../service/sports-fields.service";
 
@@ -9,10 +9,10 @@ import {SportsFieldsService} from "../../service/sports-fields.service";
 })
 export class CustomerHomeComponent implements OnInit {
 
+  ra: Array<SportField>=[];
   sportsFields: Array<SportField>=[];
   sportFieldReservation: Array<SportField>=[];
-
-  constructor(private sportsFieldsService: SportsFieldsService) {}
+  constructor(public sportsFieldsService: SportsFieldsService) {}
 
   ngOnInit(): void {
     this.getAllSportsFields();
@@ -29,7 +29,9 @@ export class CustomerHomeComponent implements OnInit {
       this.sportFieldReservation=response;
       console.log(this.sportFieldReservation);
     })
-
+    console.log(this.sportFieldReservation);
+    this.sportFieldReservation=this.ra;
+    return this.ra;
   }
 
 }
