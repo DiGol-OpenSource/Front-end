@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {Customer} from "../../customer/model/customer";
 import {SportField} from "../model/sport-field";
 
 @Injectable({

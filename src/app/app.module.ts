@@ -16,14 +16,17 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import {AppRoutingModule} from "./app-routing.module";
-import { CustomersComponent } from './customer/page/customer/customers.component';
-import {CustomersService} from "./customer/service/customers.service";
+import { CustomersComponent } from './customer-list/page/customer/customers.component';
+import {CustomersService} from "./customer-list/service/customers.service";
 import {ReservationsComponent} from "./reservation/pages/reservations/reservations.component";
 import {ReservationsService} from "./reservation/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {CustomerHomeComponent} from "./customer-home/pages/customer-home.component/customer-home.component.component";
+import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
 import {MatCardModule} from "@angular/material/card";
+import {MatSortModule} from "@angular/material/sort";
+
+
 
 
 
@@ -34,8 +37,7 @@ import {MatCardModule} from "@angular/material/card";
     ReservationsComponent,
     LoginComponent,
     RegisterComponent,
-    CustomerHomeComponent
-
+    CustomerHomeComponent,
   ],
     imports: [
         BrowserModule,
@@ -53,7 +55,8 @@ import {MatCardModule} from "@angular/material/card";
         MatInputModule,
         MatTableModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        MatSortModule
     ],
   providers: [CustomersService,ReservationsService],
   bootstrap: [AppComponent]
