@@ -22,6 +22,7 @@ import {ReservationsComponent} from "./reservation/pages/reservations/reservatio
 import {ReservationsService} from "./reservation/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {CustomerHomeComponent} from "./customer-home/pages/customer-home.component/customer-home.component.component";
 
 
 
@@ -32,6 +33,7 @@ import { RegisterComponent } from './register/register.component';
     ReservationsComponent,
     LoginComponent,
     RegisterComponent,
+    CustomerHomeComponent
 
   ],
   imports: [
