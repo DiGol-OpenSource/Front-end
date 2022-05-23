@@ -9,7 +9,7 @@ import {SportsFieldsService} from "../../service/sports-fields.service";
 })
 export class CustomerHomeComponent implements OnInit {
 
-  ra: Array<SportField>=[];
+
   sportsFields: Array<SportField>=[];
   sportFieldReservation: Array<SportField>=[];
   constructor(public sportsFieldsService: SportsFieldsService) {}
@@ -27,11 +27,9 @@ export class CustomerHomeComponent implements OnInit {
   getReservation(id:number){
     this.sportsFieldsService.getById(id).subscribe((response:any)=>{
       this.sportFieldReservation=response;
-      console.log(this.sportFieldReservation);
+      console.log("body",this.sportFieldReservation);
+      console.log("sendBody",this.sportsFieldsService.setSelectReservation(response));
     })
-    console.log(this.sportFieldReservation);
-    this.sportFieldReservation=this.ra;
-    return this.ra;
   }
 
 }

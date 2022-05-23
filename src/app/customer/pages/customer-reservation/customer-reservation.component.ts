@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SportField} from "../../model/sport-field";
 import {CustomerHomeComponent} from "../customer-home/customer-home.component";
 import {get} from "lodash";
+import {SportsFieldsService} from "../../service/sports-fields.service";
 
 @Component({
   selector: 'app-customer-reservation',
@@ -11,19 +12,14 @@ import {get} from "lodash";
 
 })
 export class CustomerReservationComponent implements OnInit {
-  reservation: Array<SportField>=[];
 
-  constructor(public currentReservation: CustomerHomeComponent) {}
+  reservation=Array<SportField>();
+
+  constructor(public currentReservation: CustomerHomeComponent,public sportFieldsService: SportsFieldsService) {}
 
   ngOnInit(): void {
-  console.log("go",this.currentReservation.getReservation(1))
-  }
-
-  getReservation(id:number){
-    this.currentReservation.sportsFieldsService.getById(id).subscribe((response:any)=>{
-      this.currentReservation.sportFieldReservation=response;
-      console.log(this.currentReservation.sportFieldReservation);
-    })
+    console.log("reservation",this.sportFieldsService.getSelectReservation());
+    this.reservation=this.sportFieldsService.getSelectReservation();
   }
 
 

@@ -16,6 +16,8 @@ export class SportsFieldsService {
 
   constructor(private http: HttpClient) { }
   //API Error Handling
+  currentReservation= Array<SportField>();
+  currentReservation1=[];
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.log(`An error ocurred: ${error.error.message}`);
@@ -25,6 +27,15 @@ export class SportsFieldsService {
       );
     }
     return throwError( () => new Error(`Something happened with request, please try again later`));
+  }
+
+
+  setSelectReservation(selectReservation: Array<SportField>){
+    return this.currentReservation=selectReservation;
+  }
+
+  getSelectReservation(){
+    return this.currentReservation;
   }
   getAll(): Observable<SportField> {
     return this.http.get<SportField>(this.basePath, this.httpOptions)
