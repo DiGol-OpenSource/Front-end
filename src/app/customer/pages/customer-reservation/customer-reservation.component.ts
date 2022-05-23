@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SportField} from "../../model/sport-field";
 import {CustomerHomeComponent} from "../customer-home/customer-home.component";
-import {get} from "lodash";
 import {SportsFieldsService} from "../../service/sports-fields.service";
 
 @Component({
@@ -13,14 +12,22 @@ import {SportsFieldsService} from "../../service/sports-fields.service";
 })
 export class CustomerReservationComponent implements OnInit {
 
-  reservation=Array<SportField>();
+  selectedReservation: Array<SportField>=[];
+  data: any[]=[];
+
 
   constructor(public currentReservation: CustomerHomeComponent,public sportFieldsService: SportsFieldsService) {}
 
   ngOnInit(): void {
     console.log("reservation",this.sportFieldsService.getSelectReservation());
-    this.reservation=this.sportFieldsService.getSelectReservation();
+    this.reservations();
   }
-
+  reservations(){
+    this.selectedReservation=this.sportFieldsService.getSelectReservation();
+  console.log("Object",this.selectedReservation);
+     this.data=Object.values(this.selectedReservation);
+    console.log("Array",this.data);
+    console.log("search",this.data[0]);
+  }
 
 }

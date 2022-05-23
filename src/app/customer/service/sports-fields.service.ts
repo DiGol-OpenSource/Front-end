@@ -16,8 +16,8 @@ export class SportsFieldsService {
 
   constructor(private http: HttpClient) { }
   //API Error Handling
-  currentReservation= Array<SportField>();
-  currentReservation1=[];
+  currentReservation: Array<SportField>=[];
+
   handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.log(`An error ocurred: ${error.error.message}`);

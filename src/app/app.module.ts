@@ -54,13 +54,13 @@ import {SportsFieldsService} from "./customer/service/sports-fields.service";
         MatButtonModule,
         RouterModule,
         MatPaginatorModule,
-        FormsModule,
         MatFormFieldModule,
         MatInputModule,
         MatTableModule,
         MatIconModule,
         MatCardModule,
-        MatSortModule
+        MatSortModule,
+
     ],
   providers: [CustomersService,ReservationsService,SportsFieldsService],
   bootstrap: [AppComponent]

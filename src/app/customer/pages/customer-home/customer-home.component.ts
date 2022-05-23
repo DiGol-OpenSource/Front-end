@@ -1,4 +1,4 @@
-import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SportField} from "../../model/sport-field";
 import {SportsFieldsService} from "../../service/sports-fields.service";
 
@@ -12,6 +12,7 @@ export class CustomerHomeComponent implements OnInit {
 
   sportsFields: Array<SportField>=[];
   sportFieldReservation: Array<SportField>=[];
+
   constructor(public sportsFieldsService: SportsFieldsService) {}
 
   ngOnInit(): void {
@@ -21,7 +22,7 @@ export class CustomerHomeComponent implements OnInit {
   getAllSportsFields(){
     this.sportsFieldsService.getAll().subscribe((response:any)=>{
       this.sportsFields=response;
-      console.log(this.sportsFields);
+      console.log("Array",this.sportsFields);
     })
   }
   getReservation(id:number){
@@ -29,6 +30,7 @@ export class CustomerHomeComponent implements OnInit {
       this.sportFieldReservation=response;
       console.log("body",this.sportFieldReservation);
       console.log("sendBody",this.sportsFieldsService.setSelectReservation(response));
+      this.sportsFieldsService.setSelectReservation(this.sportFieldReservation)
     })
   }
 
