@@ -1,17 +1,83 @@
-<div class="main-card">
-    <mat-card >
-        <mat-card-header>
-            <mat-card-title>{{data[1]}}</mat-card-title>
-            <mat-card-subtitle>{{data[3]}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{data[2]}}" alt="photo">
-        <mat-card-content>
-            <p>{{data[4]}}</p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>{{data[5]}}</button>
-        </mat-card-actions>
-    </mat-card>
 
 
+
+<div>
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+    </button>
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Booking Confirmation</ng-template>
+                <div *ngIf="display==false" class="main-card" >
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title>{{data[1]}}</mat-card-title>
+                            <mat-card-subtitle>{{data[3]}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="{{data[2]}}" alt="photo">
+                        <mat-card-content>
+                            <p>{{data[4]}}</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button mat-button>{{data[5]}}</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+                <div *ngIf="display==true">
+                    <h2>I did not select any sports field</h2>
+                </div>
+
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Select the time of your reservation</ng-template>
+                <div class="main-input">
+                    <div class="first-input">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker touchUi #picker></mat-datepicker>
+                    </mat-form-field>
+                    </div>
+                    <div class="second-input">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Hour</mat-label>
+                            <input type="text"
+                                   placeholder="Pick one"
+                                   aria-label="Number"
+                                   matInput
+                                   [formControl]="myControl"
+                                   [matAutocomplete]="auto">
+                            <mat-autocomplete #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of options" [value]="option">
+                                    {{option}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </form>
+                    </div>
+                </div>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>Reservation done.</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
 </div>

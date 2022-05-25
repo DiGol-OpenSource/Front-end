@@ -7,6 +7,24 @@
 
 }
 img {
-    height: 300px;
+    height: 400px;
     background-size: cover;
+}
+mat-grid-tile {
+    background: lightblue;
+}
+table {
+    width: 100%;
+}
+mat-stepper{
+    margin: 0 auto;
+    width: 60rem;
+    border-radius: 1.5rem;
+
+}
+.main-input{
+    display: flex;
+}
+.first-input,.second-input {
+    margin: 0 3rem;
 }

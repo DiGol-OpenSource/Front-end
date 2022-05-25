@@ -18,8 +18,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {AppRoutingModule} from "./app-routing.module";
 import { CustomersComponent } from './customer-list/page/customer/customers.component';
 import {CustomersService} from "./customer-list/service/customers.service";
-import {ReservationsComponent} from "./reservation/pages/reservations/reservations.component";
-import {ReservationsService} from "./reservation/service/reservations.service";
+import {ReservationsComponent} from "./reservations/pages/reservations/reservations.component";
+import {ReservationsService} from "./reservations/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
@@ -27,6 +27,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSortModule} from "@angular/material/sort";
 import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
 import {SportsFieldsService} from "./customer/service/sports-fields.service";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 
 
@@ -60,6 +66,12 @@ import {SportsFieldsService} from "./customer/service/sports-fields.service";
         MatIconModule,
         MatCardModule,
         MatSortModule,
+        MatGridListModule,
+        MatStepperModule,
+        MatCheckboxModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatAutocompleteModule,
 
     ],
   providers: [CustomersService,ReservationsService,SportsFieldsService],
