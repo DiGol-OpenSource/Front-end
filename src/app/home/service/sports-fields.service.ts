@@ -59,5 +59,17 @@ export class SportsFieldsService {
     )
 
   }
+  delete(id: any) {
+    return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
+        .pipe(
+            retry(2),
+            catchError(this.handleError));
+  }
+  update(id: any, item: any): Observable<SportField> {
+    return this.http.put<SportField>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+        .pipe(
+            retry(2),
+            catchError(this.handleError));
+  }
 
 }
