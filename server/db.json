@@ -1,5 +1,5 @@
 {
-  "sportsFields":[
+  "sportsFields": [
     {
       "id": 1,
       "name": "Grass Los Santos",
@@ -48,7 +48,6 @@
       "description": "Lorem lore lorem lore lorem lore lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore",
       "price": 60
     }
-
   ],
   "customers": [
     {
