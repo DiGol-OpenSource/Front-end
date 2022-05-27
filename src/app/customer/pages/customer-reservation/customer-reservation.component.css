@@ -28,3 +28,6 @@ mat-stepper{
 .first-input,.second-input {
     margin: 0 3rem;
 }
+.form-publication{
+    margin: 0 auto;
+}
