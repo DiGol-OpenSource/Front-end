@@ -1,0 +1,12 @@
+.mat-card {
+    max-width: 400px;
+}
+.main-card{
+    display: flex;
+    justify-content: center;
+
+}
+img {
+    height: 300px;
+    background-size: cover;
+}

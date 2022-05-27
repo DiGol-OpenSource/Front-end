@@ -1,16 +1,16 @@
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {Reservation} from "../model/reservation";
+import {Customer} from "../model/customer";
 import {Injectable} from "@angular/core";
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ReservationsService {
+export class CustomersService {
 
   //Customer Endpoint
-  basePath ='http://localhost:3000/reservations';
+  basePath ='http://localhost:3000/customers';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -32,24 +32,24 @@ export class ReservationsService {
     return throwError( () => new Error(`Something happened with request, please try again later`));
   }
 
-
-  getAll(): Observable<Reservation> {
-    return this.http.get<Reservation>(this.basePath, this.httpOptions)
+  //Get All Students
+  getAll(): Observable<Customer> {
+    return this.http.get<Customer>(this.basePath, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
 
-
-  update(id: any, item: any): Observable<Reservation> {
-    return this.http.put<Reservation>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  //update Customer
+  update(id: any, item: any): Observable<Customer> {
+    return this.http.put<Customer>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
   }
 
-
+  //Delete Customer
   delete(id: any) {
     return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(
@@ -57,11 +57,17 @@ export class ReservationsService {
         catchError(this.handleError));
   }
 
-
-  create(item: any): Observable<Reservation> {
-    return this.http.post<Reservation>(this.basePath, JSON.stringify(item), this.httpOptions)
+  //Create Student
+  create(item: any): Observable<Customer> {
+    return this.http.post<Customer>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
   }
+
+
+
+
+
+
 }

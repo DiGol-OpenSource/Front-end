@@ -16,14 +16,18 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import {AppRoutingModule} from "./app-routing.module";
-import { CustomersComponent } from './customer/page/customer/customers.component';
-import {CustomersService} from "./customer/service/customers.service";
+import { CustomersComponent } from './customer-list/page/customer/customers.component';
+import {CustomersService} from "./customer-list/service/customers.service";
 import {ReservationsComponent} from "./reservation/pages/reservations/reservations.component";
 import {ReservationsService} from "./reservation/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
-
+import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
+import {MatCardModule} from "@angular/material/card";
+import {MatSortModule} from "@angular/material/sort";
+import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
+import {SportsFieldsService} from "./customer/service/sports-fields.service";
+import { HttpPatchDemoComponent} from "./customer/pages/customer-publish/customer-publish.component";
 
 @NgModule({
   declarations: [
@@ -32,26 +36,30 @@ import { RegisterComponent } from './register/register.component';
     ReservationsComponent,
     LoginComponent,
     RegisterComponent,
+    CustomerHomeComponent,
+    CustomerReservationComponent,
+      HttpPatchDemoComponent
+  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        RouterModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatIconModule,
+        MatCardModule,
+        MatSortModule,
 
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    RouterModule,
-    MatPaginatorModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatIconModule
-  ],
-  providers: [CustomersService,ReservationsService],
+    ],
+  providers: [CustomersService,ReservationsService,SportsFieldsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
