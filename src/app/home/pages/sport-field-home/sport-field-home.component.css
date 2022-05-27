@@ -1,0 +1,15 @@
+.mat-card {
+    max-width: 350px;
+}
+.main-card{
+
+    height: 60rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin: 0 auto;
+}
+img {
+    height: 300px;
+    background-size: cover;
+}

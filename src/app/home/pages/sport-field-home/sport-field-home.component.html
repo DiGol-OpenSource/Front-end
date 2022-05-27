@@ -1,0 +1,51 @@
+<div>
+<h2>{{ isEditMode ? 'Edit Student' :  'Add new Student'}}</h2>
+<form #sportFieldForm='ngForm'>
+    <mat-form-field>
+        <input matInput placeholder="Name" name="name" required
+               [(ngModel)]="sportFieldData.name">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Img" name="img" required
+               [(ngModel)]="sportFieldData.img">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Address" name="address" required
+               [(ngModel)]="sportFieldData.address">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Description" name="description" required
+               [(ngModel)]="sportFieldData.description">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="number" matInput placeholder="Price" name="price" required
+               [(ngModel)]="sportFieldData.price">
+    </mat-form-field>
+    <ng-container *ngIf="isEditMode; else elseTemplate">
+        <button mat-button color="primary">Update</button>
+        <button mat-button color="warm" (click)="cancelEdit()">Cancel</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <button mat-button color="primary" (click)="addSportField()">Add</button>
+    </ng-template>
+</form>
+</div>
+
+
+
+<div class="main-card">
+    <mat-card *ngFor="let sportfield of sportsFields">
+        <mat-card-header>
+            <mat-card-title>{{sportfield.name}}</mat-card-title>
+            <mat-card-subtitle>{{sportfield.address}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{sportfield.img}}" alt="Photo of sport field">
+        <mat-card-content>
+            <p>{{sportfield.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <h3>S/{{sportfield.price}}</h3>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
