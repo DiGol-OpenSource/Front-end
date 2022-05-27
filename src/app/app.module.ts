@@ -27,7 +27,6 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSortModule} from "@angular/material/sort";
 import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
 import {SportsFieldsService} from "./home/service/sports-fields.service";
-import { HttpPatchDemoComponent} from "./customer-publish/pages/customer-publish/customer-publish.component";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
@@ -43,7 +42,6 @@ import { SportFieldHomeComponent } from './home/pages/sport-field-home/sport-fie
         RegisterComponent,
         CustomerHomeComponent,
         CustomerReservationComponent,
-        HttpPatchDemoComponent,
         SportFieldHomeComponent
     ],
     imports: [
