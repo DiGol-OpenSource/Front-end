@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {SportField} from "../../model/sport-field";
-import {CustomerHomeComponent} from "../customer-home/customer-home.component";
-import {SportsFieldsService} from "../../service/sports-fields.service";
+import {CustomerHomeComponent} from "../../../home/pages/customer-home/customer-home.component";
+import {SportsFieldsService} from "../../../home/service/sports-fields.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Reservation} from "../../../reservations/model/reservation";
 import {SendReservationService} from "../../service/send-reservation.service";

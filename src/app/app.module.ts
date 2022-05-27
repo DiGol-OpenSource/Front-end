@@ -22,16 +22,17 @@ import {ReservationsComponent} from "./reservations/pages/reservations/reservati
 import {ReservationsService} from "./reservations/service/reservations.service";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
+import {CustomerHomeComponent} from "./home/pages/customer-home/customer-home.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatSortModule} from "@angular/material/sort";
 import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
-import {SportsFieldsService} from "./customer/service/sports-fields.service";
-import { HttpPatchDemoComponent} from "./customer/pages/customer-publish/customer-publish.component";
+import {SportsFieldsService} from "./home/service/sports-fields.service";
+import { HttpPatchDemoComponent} from "./customer-publish/pages/customer-publish/customer-publish.component";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatNativeDateModule} from "@angular/material/core";
+import { SportFieldHomeComponent } from './home/pages/sport-field-home/sport-field-home.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import {MatNativeDateModule} from "@angular/material/core";
         RegisterComponent,
         CustomerHomeComponent,
         CustomerReservationComponent,
-        HttpPatchDemoComponent
+        HttpPatchDemoComponent,
+        SportFieldHomeComponent
     ],
     imports: [
         BrowserModule,

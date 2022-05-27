@@ -6,9 +6,9 @@ import {CustomersComponent} from "./customer-list/page/customer/customers.compon
 import {ReservationsComponent} from "./reservations/pages/reservations/reservations.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
-import {CustomerHomeComponent} from "./customer/pages/customer-home/customer-home.component";
+import {CustomerHomeComponent} from "./home/pages/customer-home/customer-home.component";
 import {CustomerReservationComponent} from "./customer/pages/customer-reservation/customer-reservation.component";
-import {HttpPatchDemoComponent} from "./customer/pages/customer-publish/customer-publish.component";
+import {HttpPatchDemoComponent} from "./customer-publish/pages/customer-publish/customer-publish.component";
 
 
 const routes: Routes = [
