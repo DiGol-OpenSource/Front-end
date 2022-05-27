@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {SportField} from "../../model/sport-field";
 import {CustomerHomeComponent} from "../customer-home/customer-home.component";
 import {SportsFieldsService} from "../../service/sports-fields.service";
@@ -6,7 +6,6 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Reservation} from "../../../reservations/model/reservation";
 import {SendReservationService} from "../../service/send-reservation.service";
 import {MatTableDataSource} from "@angular/material/table";
-
 
 @Component({
   selector: 'app-customer-reservation',
@@ -30,6 +29,8 @@ export class CustomerReservationComponent implements OnInit {
   reservationData!:Reservation;
   dataSource!: MatTableDataSource<any>;
 
+
+
   ngOnInit(): void {
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required],
@@ -52,6 +53,11 @@ export class CustomerReservationComponent implements OnInit {
   displayReservation(){
     this.display = this.data.length <= 0;
   }
-
-
+  addReservation(){
+    this.reservationData.id = 0;
+    this.sendReservationService.create(this.reservationData).subscribe( (response: any) => {
+      this.dataSource.data.push({...response});
+      this.dataSource.data = this.dataSource.data.map((o: any)=> {return o;})
+    });
+  }
 }
