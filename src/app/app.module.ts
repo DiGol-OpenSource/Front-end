@@ -27,28 +27,23 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSortModule} from "@angular/material/sort";
 import { CustomerReservationComponent } from './customer/pages/customer-reservation/customer-reservation.component';
 import {SportsFieldsService} from "./customer/service/sports-fields.service";
-import {MatGridListModule} from "@angular/material/grid-list";
+import { HttpPatchDemoComponent} from "./customer/pages/customer-publish/customer-publish.component";
 import {MatStepperModule} from "@angular/material/stepper";
-import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatNativeDateModule} from "@angular/material/core";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
-
-
-
-
-
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CustomersComponent,
-    ReservationsComponent,
-    LoginComponent,
-    RegisterComponent,
-    CustomerHomeComponent,
-    CustomerReservationComponent,
-  ],
+    declarations: [
+        AppComponent,
+        CustomersComponent,
+        ReservationsComponent,
+        LoginComponent,
+        RegisterComponent,
+        CustomerHomeComponent,
+        CustomerReservationComponent,
+        HttpPatchDemoComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -66,15 +61,12 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
         MatIconModule,
         MatCardModule,
         MatSortModule,
-        MatGridListModule,
         MatStepperModule,
-        MatCheckboxModule,
         MatDatepickerModule,
-        MatNativeDateModule,
         MatAutocompleteModule,
-
+        MatNativeDateModule,
     ],
-  providers: [CustomersService,ReservationsService,SportsFieldsService],
-  bootstrap: [AppComponent]
+    providers: [CustomersService,ReservationsService,SportsFieldsService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
