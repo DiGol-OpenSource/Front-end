@@ -3,7 +3,10 @@ table {
   width: 50%;
   margin: 0 auto;
 }
-
+mat-paginator{
+  width: 50%;
+  margin: 0 auto;
+}
 th {
   text-align: center;
 }

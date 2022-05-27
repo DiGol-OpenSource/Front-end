@@ -1,8 +1,8 @@
 .mat-card {
     max-width: 350px;
+    margin: 100px;
 }
 .main-card{
-
     height: 60rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
