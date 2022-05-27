@@ -29,7 +29,7 @@
                 </div>
 
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperNext>Confirm</button>
                 </div>
             </form>
         </mat-step>
@@ -68,13 +68,19 @@
                 </div>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperNext>Reserve</button>
                 </div>
             </form>
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Done</ng-template>
-            <p>Reservation done.</p>
+            <div *ngIf="display==false">
+                <h2>Reservation done.</h2>
+            </div>
+            <div *ngIf="display==true">
+                <h2>I do not confirm the time and date of the reservation</h2>
+            </div>
+
             <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>

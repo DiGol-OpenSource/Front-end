@@ -16,11 +16,10 @@ export class ReservationsComponent implements OnInit, AfterViewInit {
 
   reservationData: Reservation;
   dataSource: MatTableDataSource<any>;
-  displayedColumns: string[] =['id', 'customer', 'date', 'prepayment'];
+  displayedColumns: string[] =['id', 'customer', 'date', 'prepayment','actions'];
 
   @ViewChild('reservationForm', {static: false})
   reservationForm!: NgForm;
-
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator;
 

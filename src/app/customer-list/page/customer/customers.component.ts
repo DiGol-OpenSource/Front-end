@@ -16,7 +16,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
 
   customerData: Customer;
   dataSource: MatTableDataSource<any>;
-  displayedColumns: string[] =['id', 'name', 'phoneNumber', 'dni'];
+  displayedColumns: string[] =['id', 'name', 'phoneNumber', 'dni','actions'];
 
   @ViewChild('customerForm', {static: false})
   customerForm!: NgForm;

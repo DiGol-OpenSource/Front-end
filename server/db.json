@@ -47,6 +47,13 @@
       "address": "Av. Real N° 124",
       "description": "Lorem lore lorem lore lorem lore lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore",
       "price": 60
+    },
+    {
+      "name": "Hola",
+      "img": "Hola",
+      "address": "SDASD",
+      "description": "ASDASD",
+      "id": 7
     }
   ],
   "customers": [
