@@ -1,4 +1,8 @@
+mat-paginator {
+    background-color: rgb(60, 178, 60);
+}
 .mat-card {
+    background-color: rgb(60, 178, 60);
     max-width: 350px;
     margin:  40px 90px;
 }

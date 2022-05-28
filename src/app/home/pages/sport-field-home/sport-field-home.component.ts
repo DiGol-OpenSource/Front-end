@@ -31,7 +31,7 @@ export class SportFieldHomeComponent implements OnInit{
   getAllSportsFields(){
     this.sportsFieldsService.getAll().subscribe((response:any)=>{
       this.sportsFields=response;
-      console.log("sporthome",this.sportsFields);
+      console.log("sport-home",this.sportsFields);
     })
   }
   editItem(element: SportField){
@@ -55,7 +55,7 @@ export class SportFieldHomeComponent implements OnInit{
     this.sportsFieldsService.create(this.sportFieldData).subscribe((response: any)=> {
       this.dataSource.data.push({...response});
       this.dataSource.data=this.dataSource.data.map((o: any)=>{return o;})
-      console.log("añadido")
+      console.log("added",response)
     })
   }
   updateSportField() {

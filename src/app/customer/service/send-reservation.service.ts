@@ -9,6 +9,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 })
 export class SendReservationService {
   basePath ='http://localhost:3000/customers';
+  //basePath ='https://my-json-server.typicode.com/NiltonTorres/datos/customers';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

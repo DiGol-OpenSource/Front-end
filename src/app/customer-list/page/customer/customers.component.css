@@ -1,18 +1,24 @@
-
+mat-paginator {
+  background-color: rgba(2, 117, 2, 0.56);
+}
 table {
+  background-color: rgba(2, 117, 2, 0.56);
   width: 50%;
   margin: 0 auto;
 
 }
 mat-paginator{
+  background-color: rgba(2, 117, 2, 0.7);
   width: 50%;
   margin: 0 auto;
 }
 
 th {
+
   text-align: center;
 }
 .addNew1{
+  background-color: rgba(7, 82, 7, 0.89);
   width: 50%;
   margin: 0 auto;
 

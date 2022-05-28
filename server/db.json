@@ -47,27 +47,6 @@
       "address": "Av. Real N° 124",
       "description": "Lorem lore lorem lore lorem lore lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore  lorem lore lorem lore lorem lore",
       "price": 60
-    },
-    {
-      "name": "Hola",
-      "img": "Hola",
-      "address": "SDASD",
-      "description": "ASDASD",
-      "id": 7
-    },
-    {
-      "name": "CInsumos",
-      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fespaibarca.fcbarcelona.com%2Fes%2Fficha%2F1651903%2Fsostenibilidad-futuro-camp-nou&psig=AOvVaw2AaP4USJJpW8epscDxf_np&ust=1653762590730000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNjGvPCngPgCFQAAAAAdAAAAABAJ",
-      "address": "asdasd",
-      "price": 23,
-      "description": "Lorem LoremLoremLoremLoremvvvvLoremvLoremLoremLorem",
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
     }
   ],
   "customers": [

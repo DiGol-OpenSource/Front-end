@@ -1,9 +1,11 @@
 
 table {
+  background-color: #4AAB1D;
   width: 50%;
   margin: 0 auto;
 }
 mat-paginator{
+  background-color: #4AAB1D;
   width: 50%;
   margin: 0 auto;
 }

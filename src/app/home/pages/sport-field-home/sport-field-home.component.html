@@ -1,6 +1,7 @@
 <div class="form-publication">
 
-<form #sportFieldForm='ngForm'>
+<form (submit)="onSummit()" #sportFieldForm='ngForm'>
+
     <mat-form-field>
         <input matInput placeholder="Name" name="name" required
                [(ngModel)]="sportFieldData.name">

@@ -11,6 +11,7 @@ export class CustomersService {
 
   //Customer Endpoint
   basePath ='http://localhost:3000/customers';
+  //basePath ='https://my-json-server.typicode.com/NiltonTorres/datos/customers';
 
   httpOptions = {
     headers: new HttpHeaders({

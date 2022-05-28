@@ -10,7 +10,9 @@ import {Injectable} from "@angular/core";
 export class ReservationsService {
 
   //Customer Endpoint
-  basePath ='http://localhost:3000/reservations';
+
+  //basePath ='http://localhost:3000/reservations';
+  basePath ='https://my-json-server.typicode.com/NiltonTorres/datos/reservations';
 
   httpOptions = {
     headers: new HttpHeaders({

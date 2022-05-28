@@ -7,7 +7,9 @@ import {SportField} from "../model/sport-field";
   providedIn: 'root'
 })
 export class SportsFieldsService {
+
   basePath='http://localhost:3000/sportsFields';
+ //basePath='https://my-json-server.typicode.com/NiltonTorres/datos/sportsFields';
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json',

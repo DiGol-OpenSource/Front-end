@@ -1,7 +1,13 @@
+mat-paginator {
+    background-color: rgb(60, 178, 60);
+}
+
 .mat-card {
     max-width: 400px;
+    background-color: rgb(60, 178, 60);
 }
 .main-card{
+    background-color: rgb(60, 178, 60);
     display: flex;
     justify-content: center;
 
@@ -11,17 +17,14 @@ img {
     background-size: cover;
 }
 mat-grid-tile {
-    background: lightblue;
+    background-color: rgb(60, 178, 60);
 }
 table {
+    background-color: rgba(2, 117, 2, 0.69);
+
     width: 100%;
 }
-mat-stepper{
-    margin: 0 auto;
-    width: 60rem;
-    border-radius: 1.5rem;
 
-}
 .main-input{
     display: flex;
 }
@@ -31,3 +34,35 @@ mat-stepper{
 .form-publication{
     margin: 0 auto;
 }
+mat-stepper{
+    background-color: rgba(2, 117, 2, 0.69);
+    margin: 0 auto;
+    width: 600px;
+    border-radius: 1.5rem;
+}
+@media (max-width:376px ) {
+    mat-stepper{
+        background-color: rgba(2, 117, 2, 0.69);
+        margin: 20px;
+        width: 300px;
+        border-radius: 1.5rem;
+    }
+}
+@media (max-width:415px ) {
+    mat-stepper{
+        background-color: rgba(2, 117, 2, 0.69);
+        margin: 20px;
+        width: 300px;
+        border-radius: 1.5rem;
+    }
+}
+@media (max-width:391px ) {
+    mat-stepper{
+        background-color: rgba(2, 117, 2, 0.69);
+        margin: 25px;
+        width: 300px;
+        border-radius: 1.5rem;
+    }
+}
+
+
