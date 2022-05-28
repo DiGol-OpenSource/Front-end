@@ -4,7 +4,7 @@ mat-paginator {
 .mat-card {
     background-color: rgb(60, 178, 60);
     max-width: 350px;
-    margin: 0 90px;
+    margin: 50px 90px;
 }
 .main-card{
 
@@ -19,7 +19,7 @@ img {
     background-size: cover;
 }
 .form-publication{
-    justify-content: center;
-    margin: 25px;
-
+    background-color: grey;
+    padding-left: 30rem;
 }
+
